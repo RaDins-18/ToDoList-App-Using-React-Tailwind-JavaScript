@@ -1,0 +1,74 @@
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid rgb(255, 255, 255);
+    white-space: nowrap;
+    animation:
+        waiting 0.5s,
+        typing 1.5s 0.5s steps(15, end),
+        blink-caret .75s 0.5s step-end infinite;
+}
+
+/* The waiting effect */
+@keyframes waiting {
+    from {
+        opacity: 0.5;
+        width: 0;
+    }
+
+    to {
+        opacity: 0.5;
+        width: 0;
+    }
+}
+
+/* The blinking cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+.box {
+    position: fixed;
+    top: 0;
+    transform: rotate(70deg); 
+    right: 0;
+}
+  
+.wave {
+    position: absolute;
+    opacity: .4;
+    width: 2000px;
+    height: 1800px;
+    margin-left: 250px;
+    margin-top: -200px;
+    border-radius: 43%;
+    z-index: -1;
+}
+  
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    from {transform: rotate(360deg);}
+}
+  
+.wave.-one {
+    animation: rotate 10000ms infinite linear;
+    opacity: 3%;
+    background: white;
+    margin-left: 300px;
+    margin-top: -200px;
+}
+  
+.wave.-two {
+    animation: rotate 6000ms infinite linear;
+    opacity: 2%;
+    background: white;
+    
+    margin-left: 250px;
+    margin-top: -600px;
+}

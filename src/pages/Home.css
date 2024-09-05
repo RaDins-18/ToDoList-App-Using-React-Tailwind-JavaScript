@@ -1,0 +1,51 @@
+.home-typewriter {
+    overflow: hidden;
+    border-right: 2px solid rgb(255, 255, 255);
+    white-space: nowrap;
+    animation:
+        waiting 0.5s,
+        home-typing 1.5s 0.5s steps(45, end),
+        blink-caret .75s 0.5s step-end infinite;
+}
+
+
+/* The typing effect */
+@keyframes home-typing {
+    from {
+        opacity: 0.5;
+        width: 0px;
+    }
+
+    to {
+        opacity: 1;
+        width: 340px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    @keyframes home-typing {
+        from {
+            opacity: 0.5;
+            width: 0;
+        }
+    
+        to {
+            opacity: 1;
+            width: 639px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    @keyframes home-typing {
+        from {
+            opacity: 0.5;
+            width: 0;
+        }
+    
+        to {
+            opacity: 1;
+            width: 908px;
+        }
+    }
+}
